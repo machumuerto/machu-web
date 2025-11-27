@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homer's World | The Animated Experience</title>
+    <meta name="description" content="A premium animated experience featuring everyone's favorite yellow dad, Homer Simpson.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="background-glow"></div>
+    
+    <header class="hero">
+        <nav>
+            <div class="logo">HOMER<span class="dot">.</span></div>
+            <div class="links">
+                <a href="#thinking">Philosophy</a>
+                <a href="#sleeping">Rest</a>
+            </div>
+        </nav>
+        
+        <div class="hero-content">
+            <h1 class="title">Mmm... <span class="highlight">Donuts</span></h1>
+            <p class="subtitle">The pursuit of the perfect circular pastry.</p>
+            <button id="donut-btn" class="cta-button">Feed Homer</button>
+        </div>
+
+        <div class="hero-image-container">
+            <div class="glow-circle"></div>
+            <img src="assets/homer_donut.png" alt="Homer eating a donut" class="floating-homer" id="homer-main">
+        </div>
+    </header>
+
+    <section id="thinking" class="section reverse">
+        <div class="content-wrapper">
+            <div class="text-content">
+                <h2>Deep Thoughts</h2>
+                <p>"I think, therefore I am... hungry."</p>
+                <div class="stat-card">
+                    <span class="number">99%</span>
+                    <span class="label">Brain Power Used on Food</span>
+                </div>
+            </div>
+            <div class="image-wrapper">
+                <img src="assets/homer_thinking.png" alt="Homer thinking" class="pulse-homer">
+            </div>
+        </div>
+    </section>
+
+    <section id="sleeping" class="section">
+        <div class="content-wrapper">
+            <div class="image-wrapper">
+                <img src="assets/homer_sleeping.png" alt="Homer sleeping" class="sleeping-homer">
+                <div class="zzz-container" id="zzz-container"></div>
+            </div>
+            <div class="text-content">
+                <h2>Power Plant Mode</h2>
+                <p>Maximum efficiency achieved through strategic napping.</p>
+                <button class="secondary-button" onclick="alert('Shh! You\'ll wake him up!')">Wake Up</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2025 Homer's World. Made with 🍩 by Antigravity.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
