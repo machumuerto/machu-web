@@ -77,19 +77,31 @@ document.addEventListener('DOMContentLoaded', () => {
             // Shake animation
             sleepingHomer.classList.add('shake-wake');
 
+            // Show Mr. Burns
+            const burnsContainer = document.getElementById('burns-container');
+            if (burnsContainer) {
+                burnsContainer.classList.add('active');
+            }
+
             // Change button text
             const originalText = wakeUpBtn.innerText;
-            wakeUpBtn.innerText = "5 MORE MINUTES!";
+            wakeUpBtn.innerText = "OH NO!";
             wakeUpBtn.style.color = "var(--donut-pink)";
             wakeUpBtn.style.borderColor = "var(--donut-pink)";
 
             setTimeout(() => {
                 sleepingHomer.classList.remove('shake-wake');
                 if (zzzContainer) zzzContainer.style.opacity = '1';
+
+                // Hide Mr. Burns
+                if (burnsContainer) {
+                    burnsContainer.classList.remove('active');
+                }
+
                 wakeUpBtn.innerText = originalText;
                 wakeUpBtn.style.color = "";
                 wakeUpBtn.style.borderColor = "";
-            }, 1000);
+            }, 3000); // Increased duration to let Burns be seen
         });
     }
 });
