@@ -346,201 +346,6 @@ footer {
     position: absolute;
     color: var(--text-muted);
     font-weight: bold;
-    filter: blur(100px);
-    opacity: 0.2;
-    z-index: 1;
-}
-
-.floating-homer {
-    width: 100%;
-    max-width: 500px;
-    z-index: 2;
-    animation: float 6s ease-in-out infinite;
-    filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.5));
-}
-
-/* Sections */
-.section {
-    min-height: 80vh;
-    padding: 5rem 10%;
-    display: flex;
-    align-items: center;
-}
-
-.content-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 4rem;
-    width: 100%;
-}
-
-.reverse .content-wrapper {
-    flex-direction: row-reverse;
-}
-
-.text-content h2 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.text-content p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-}
-
-.stat-card {
-    background: var(--bg-card);
-    padding: 1.5rem;
-    border-radius: 20px;
-    display: inline-block;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.stat-card .number {
-    display: block;
-    font-size: 2.5rem;
-    font-weight: 900;
-    color: var(--nuclear-green);
-}
-
-.stat-card .label {
-    font-size: 0.9rem;
-    color: var(--text-muted);
-}
-
-.image-wrapper {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    position: relative;
-}
-
-.image-wrapper img {
-    width: 100%;
-    max-width: 450px;
-    border-radius: 20px;
-    /* Optional: if images have backgrounds, border-radius helps. If transparent, it does nothing bad. */
-}
-
-.pulse-homer {
-    animation: pulse 4s ease-in-out infinite;
-}
-
-.sleeping-homer {
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-}
-
-.secondary-button {
-    padding: 1rem 2rem;
-    background: transparent;
-    border: 2px solid var(--text-muted);
-    color: var(--text-main);
-    border-radius: 50px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.secondary-button:hover {
-    border-color: var(--nuclear-green);
-    color: var(--nuclear-green);
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    padding: 2rem;
-    color: var(--text-muted);
-    font-size: 0.9rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Animations */
-@keyframes float {
-    0% {
-        transform: translateY(0px) rotate(0deg);
-    }
-
-    50% {
-        transform: translateY(-20px) rotate(2deg);
-    }
-
-    100% {
-        transform: translateY(0px) rotate(0deg);
-    }
-}
-
-@keyframes pulse {
-    0% {
-        transform: scale(1);
-    }
-
-    50% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1);
-    }
-}
-
-@keyframes shake {
-    0% {
-        transform: translate(1px, 1px) rotate(0deg);
-    }
-
-    10% {
-        transform: translate(-1px, -2px) rotate(-1deg);
-    }
-
-    20% {
-        transform: translate(-3px, 0px) rotate(1deg);
-    }
-
-    30% {
-        transform: translate(3px, 2px) rotate(0deg);
-    }
-
-    40% {
-        transform: translate(1px, -1px) rotate(1deg);
-    }
-
-    50% {
-        transform: translate(-1px, 2px) rotate(-1deg);
-    }
-
-    60% {
-        transform: translate(-3px, 1px) rotate(0deg);
-    }
-
-    70% {
-        transform: translate(3px, 1px) rotate(-1deg);
-    }
-
-    80% {
-        transform: translate(-1px, -1px) rotate(1deg);
-    }
-
-    90% {
-        transform: translate(1px, 2px) rotate(0deg);
-    }
-
-    100% {
-        transform: translate(1px, -2px) rotate(-1deg);
-    }
-}
-
-.shake-wake {
-    animation: shake 0.5s;
-    filter: drop-shadow(0 0 10px var(--donut-pink));
-}
-
-/* ZZZ Animation */
-.zzz {
-    position: absolute;
-    color: var(--text-muted);
-    font-weight: bold;
     font-size: 1.5rem;
     animation: floatUp 3s ease-in infinite;
     opacity: 0;
@@ -642,412 +447,68 @@ footer {
     }
 
     .content-wrapper,
-    /* Footer */
-    footer {
+    .reverse .content-wrapper {
+        flex-direction: column;
         text-align: center;
+    }
+
+    .links {
+        display: none;
+    }
+
+    footer {
         padding: 2rem;
-        color: var(--text-muted);
-        font-size: 0.9rem;
-        border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
-
-    /* Animations */
-    @keyframes float {
-        0% {
-            transform: translateY(0px) rotate(0deg);
-        }
-
-        50% {
-            transform: translateY(-20px) rotate(2deg);
-        }
-
-        100% {
-            transform: translateY(0px) rotate(0deg);
-        }
-    }
-
-    @keyframes pulse {
-        0% {
-            transform: scale(1);
-        }
-
-        50% {
-            transform: scale(1.05);
-        }
-
-        100% {
-            transform: scale(1);
-        }
-    }
-
-    @keyframes shake {
-        0% {
-            transform: translate(1px, 1px) rotate(0deg);
-        }
-
-        10% {
-            transform: translate(-1px, -2px) rotate(-1deg);
-        }
-
-        20% {
-            transform: translate(-3px, 0px) rotate(1deg);
-        }
-
-        30% {
-            transform: translate(3px, 2px) rotate(0deg);
-        }
-
-        40% {
-            transform: translate(1px, -1px) rotate(1deg);
-        }
-
-        50% {
-            transform: translate(-1px, 2px) rotate(-1deg);
-        }
-
-        60% {
-            transform: translate(-3px, 1px) rotate(0deg);
-        }
-
-        70% {
-            transform: translate(3px, 1px) rotate(-1deg);
-        }
-
-        80% {
-            transform: translate(-1px, -1px) rotate(1deg);
-        }
-
-        90% {
-            transform: translate(1px, 2px) rotate(0deg);
-        }
-
-        100% {
-            transform: translate(1px, -2px) rotate(-1deg);
-        }
-    }
-
-    .shake-wake {
-        animation: shake 0.5s;
-        filter: drop-shadow(0 0 10px var(--donut-pink));
-    }
-
-    /* ZZZ Animation */
-    .zzz {
-        position: absolute;
-        color: var(--text-muted);
-        font-weight: bold;
-        font-size: 1.5rem;
-        animation: floatUp 3s ease-in infinite;
-        opacity: 0;
-    }
-
-    @keyframes floatUp {
-        0% {
-            transform: translateY(0) translateX(0);
-            opacity: 0;
-        }
-
-        20% {
-            opacity: 1;
-        }
-
-        100% {
-            transform: translateY(-50px) translateX(20px);
-            opacity: 0;
-        }
-    }
-
-    /* Mr. Burns Interaction */
-    .burns-container {
-        position: absolute;
-        top: -50px;
-        right: -20px;
-        width: 200px;
-        height: 200px;
-        pointer-events: none;
-        opacity: 0;
-        transform: translateY(20px);
-        transition: all 0.5s ease-out;
-        z-index: 10;
-    }
-
-    .burns-container.active {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    .mr-burns {
-        width: 100%;
-        height: auto;
-        filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
-    }
-
-    .speech-bubble {
-        position: absolute;
-        top: -40px;
-        right: 100%;
-        background: white;
-        color: black;
-        padding: 1rem;
-        border-radius: 20px;
-        font-weight: bold;
-        font-size: 1.2rem;
-        white-space: nowrap;
-        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        border: 2px solid black;
-    }
-
-    .speech-bubble::after {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        margin-top: -10px;
-        border-width: 10px;
-        border-style: solid;
-        border-color: transparent transparent transparent white;
-    }
-
-    .speech-bubble::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 100%;
-        margin-top: -13px;
-        border-width: 13px;
-        border-style: solid;
-        border-color: transparent transparent transparent black;
-        z-index: -1;
-    }
-
-    /* Mobile Responsiveness */
-    @media (max-width: 768px) {
-        .hero {
-            flex-direction: column;
-            text-align: center;
-            padding-top: 8rem;
-        }
-
-        .hero-content {
-            margin-bottom: 3rem;
-        }
-
-        .title {
-            font-size: 3.5rem;
-        }
-
-        .content-wrapper,
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 2rem;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        /* Animations */
-        @keyframes float {
-            0% {
-                transform: translateY(0px) rotate(0deg);
-            }
-
-            50% {
-                transform: translateY(-20px) rotate(2deg);
-            }
-
-            100% {
-                transform: translateY(0px) rotate(0deg);
-            }
-        }
-
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-
-            50% {
-                transform: scale(1.05);
-            }
-
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes shake {
-            0% {
-                transform: translate(1px, 1px) rotate(0deg);
-            }
-
-            10% {
-                transform: translate(-1px, -2px) rotate(-1deg);
-            }
-
-            20% {
-                transform: translate(-3px, 0px) rotate(1deg);
-            }
-
-            30% {
-                transform: translate(3px, 2px) rotate(0deg);
-            }
-
-            40% {
-                transform: translate(1px, -1px) rotate(1deg);
-            }
-
-            50% {
-                transform: translate(-1px, 2px) rotate(-1deg);
-            }
-
-            60% {
-                transform: translate(-3px, 1px) rotate(0deg);
-            }
-
-            70% {
-                transform: translate(3px, 1px) rotate(-1deg);
-            }
-
-            80% {
-                transform: translate(-1px, -1px) rotate(1deg);
-            }
-
-            90% {
-                transform: translate(1px, 2px) rotate(0deg);
-            }
-
-            100% {
-                transform: translate(1px, -2px) rotate(-1deg);
-            }
-        }
-
-        .shake-wake {
-            animation: shake 0.5s;
-            filter: drop-shadow(0 0 10px var(--donut-pink));
-        }
-
-        /* ZZZ Animation */
-        .zzz {
-            position: absolute;
-            color: var(--text-muted);
-            font-weight: bold;
-            font-size: 1.5rem;
-            animation: floatUp 3s ease-in infinite;
-            opacity: 0;
-        }
-
-        @keyframes floatUp {
-            0% {
-                transform: translateY(0) translateX(0);
-                opacity: 0;
-            }
-
-            20% {
-                opacity: 1;
-            }
-
-            100% {
-                transform: translateY(-50px) translateX(20px);
-                opacity: 0;
-            }
-        }
-
-        /* Mr. Burns Interaction */
-        .burns-container {
-            position: absolute;
-            top: -50px;
-            right: -20px;
-            width: 200px;
-            height: 200px;
-            pointer-events: none;
-            opacity: 0;
-            transform: translateY(20px);
-            transition: all 0.5s ease-out;
-            z-index: 10;
-        }
-
-        .burns-container.active {
-            opacity: 1;
-            transform: translateY(0);
-        }
-
-        .mr-burns {
-            width: 100%;
-            height: auto;
-            filter: drop-shadow(0 5px 15px rgba(0, 0, 0, 0.5));
-        }
-
-        .speech-bubble {
-            position: absolute;
-            top: -40px;
-            right: 100%;
-            background: white;
-            color: black;
-            padding: 1rem;
-            border-radius: 20px;
-            font-weight: bold;
-            font-size: 1.2rem;
-            white-space: nowrap;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-            border: 2px solid black;
-        }
-
-        .speech-bubble::after {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 100%;
-            margin-top: -10px;
-            border-width: 10px;
-            border-style: solid;
-            border-color: transparent transparent transparent white;
-        }
-
-        .speech-bubble::before {
-            content: '';
-            position: absolute;
-            top: 50%;
-            left: 100%;
-            margin-top: -13px;
-            border-width: 13px;
-            border-style: solid;
-            border-color: transparent transparent transparent black;
-            z-index: -1;
-        }
-
-        /* Mobile Responsiveness */
-        @media (max-width: 768px) {
-            .hero {
-                flex-direction: column;
-                text-align: center;
-                padding-top: 8rem;
-            }
-
-            .hero-content {
-                margin-bottom: 3rem;
-            }
-
-            .title {
-                font-size: 3.5rem;
-            }
-
-            .content-wrapper,
-            .reverse .content-wrapper {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .links {
-                display: none;
-                /* Simple mobile hide for now */
-            }
-        }
-
-        .victory-homer {
-            filter: drop-shadow(0 10px 30px rgba(254, 217, 15, 0.3));
-            transition: transform 0.3s ease;
-        }
-
-        .victory-homer:hover {
-            transform: scale(1.05) rotate(2deg);
-        }
+}
+
+/* QA Section specific overrides */
+#qa-bubble {
+    position: absolute;
+    top: -80px;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+    max-width: 90%;
+    background: white;
+    color: black;
+    padding: 1.5rem;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+    border: 2px solid black;
+    z-index: 10;
+}
+
+#qa-bubble::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 0;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: white transparent transparent transparent;
+}
+
+#qa-bubble::before {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-top: 0;
+    margin-left: -13px;
+    border-width: 13px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+    z-index: -1;
+}
+
+.qa-homer {
+    width: 100%;
+    max-width: 450px;
+    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
+    transition: transform 0.3s ease;
+}

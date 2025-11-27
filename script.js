@@ -110,6 +110,32 @@ document.addEventListener('DOMContentLoaded', () => {
             }, 3000); // Increased duration to let Burns be seen
         });
     }
+    // QA Section Interaction
+    const qaBtn = document.getElementById('qa-toggle-btn');
+    const qaImg = document.getElementById('qa-homer-img');
+    const qaBubble = document.getElementById('qa-bubble');
+    let isAnswered = false;
+
+    if (qaBtn && qaImg && qaBubble) {
+        qaBtn.addEventListener('click', () => {
+            isAnswered = !isAnswered;
+
+            if (isAnswered) {
+                qaImg.src = 'assets/homer_answering.png';
+                qaBubble.innerText = 'Pregúntale a Gabi mejor que a drast';
+                qaBtn.innerHTML = '<span class="icon">❓</span> Ask Again';
+            } else {
+                qaImg.src = 'assets/homer_asking.png';
+                qaBubble.innerText = '¿Cuánto tiempo se necesita para hacer una página web?';
+                qaBtn.innerHTML = '<span class="icon">↩️</span> Reply';
+            }
+
+            // Add a little animation
+            qaImg.classList.remove('pulse-homer');
+            void qaImg.offsetWidth; // trigger reflow
+            qaImg.classList.add('pulse-homer');
+        });
+    }
 });
 
 function createConfetti() {
