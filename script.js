@@ -77,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
             // Shake animation
             sleepingHomer.classList.add('shake-wake');
 
+            // Swap Image
+            const originalImageSrc = sleepingHomer.src;
+            sleepingHomer.src = 'assets/homer_waking_up.png';
+
             // Show Mr. Burns
             const burnsContainer = document.getElementById('burns-container');
             if (burnsContainer) {
@@ -91,6 +95,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
             setTimeout(() => {
                 sleepingHomer.classList.remove('shake-wake');
+                sleepingHomer.src = originalImageSrc; // Revert image
+
                 if (zzzContainer) zzzContainer.style.opacity = '1';
 
                 // Hide Mr. Burns
