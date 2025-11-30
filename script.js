@@ -136,6 +136,20 @@ document.addEventListener('DOMContentLoaded', () => {
             qaImg.classList.add('pulse-homer');
         });
     }
+    // Sadgasm Player Logic
+    const audioPlayers = document.querySelectorAll('.grunge-player');
+
+    audioPlayers.forEach(player => {
+        player.addEventListener('play', () => {
+            // Stop all other players
+            audioPlayers.forEach(otherPlayer => {
+                if (otherPlayer !== player) {
+                    otherPlayer.pause();
+                    otherPlayer.currentTime = 0;
+                }
+            });
+        });
+    });
 });
 
 function createConfetti() {

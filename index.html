@@ -57,15 +57,132 @@
         <div class="content-wrapper">
             <div class="image-wrapper">
                 <img src="assets/homer_sleeping.png" alt="Homer sleeping" class="sleeping-homer">
-                <div class="zzz-container" id="zzz-container"></div>
-                <div class="burns-container" id="burns-container">
-                    <img src="assets/mr_burns.png" alt="Mr. Burns" class="mr-burns">
-                    <div class="speech-bubble">jodete drast</div>
-                </div>
-            </div>
-            <div class="text-content">
-                <h2>Power Plant Mode</h2>
-                <script src="script.js"></script>
-</body>
+                <!DOCTYPE html>
+                <html lang="en">
 
-</html>
+                <head>
+                    <meta charset="UTF-8">
+                    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                    <title>Homer's World | The Animated Experience</title>
+                    <meta name="description"
+                        content="A premium animated experience featuring everyone's favorite yellow dad, Homer Simpson.">
+                    <link rel="preconnect" href="https://fonts.googleapis.com">
+                    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+                    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700;900&display=swap"
+                        rel="stylesheet">
+                    <link rel="stylesheet" href="styles.css">
+                </head>
+
+                <body>
+                    <div class="background-glow"></div>
+
+                    <header class="hero">
+                        <nav>
+                            <div class="logo">HOMER<span class="dot">.</span></div>
+                            <div class="links">
+                                <a href="#thinking">Philosophy</a>
+                                <a href="#sleeping">Rest</a>
+                            </div>
+                        </nav>
+
+                        <div class="hero-content">
+                            <h1 class="title">Mmm... <span class="highlight">Donuts</span></h1>
+                            <p class="subtitle">The pursuit of the perfect circular pastry.</p>
+                            <button id="donut-btn" class="cta-button">Feed Homer</button>
+                        </div>
+
+                        <div class="hero-image-container">
+                            <div class="glow-circle"></div>
+                            <img src="assets/homer_donut.png" alt="Homer eating a donut" class="floating-homer"
+                                id="homer-main">
+                        </div>
+                    </header>
+
+                    <section id="thinking" class="section reverse">
+                        <div class="content-wrapper">
+                            <div class="text-content">
+                                <h2>Deep Thoughts</h2>
+                                <p>"I think, therefore I am... hungry."</p>
+                                <div class="stat-card">
+                                    <span class="number">99%</span>
+                                    <span class="label">Brain Power Used on Food</span>
+                                </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <img src="assets/homer_thinking.png" alt="Homer thinking" class="pulse-homer">
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="sleeping" class="section">
+                        <div class="content-wrapper">
+                            <div class="image-wrapper">
+                                <img src="assets/homer_sleeping.png" alt="Homer sleeping" class="sleeping-homer">
+                                <div class="zzz-container" id="zzz-container"></div>
+                                <div class="burns-container" id="burns-container">
+                                    <img src="assets/mr_burns.png" alt="Mr. Burns" class="mr-burns">
+                                    <div class="speech-bubble">jodete drast</div>
+                                </div>
+                            </div>
+                            <div class="text-content">
+                                <h2>Power Plant Mode</h2>
+                                <p>Working hard or hardly working?</p>
+                                <button class="secondary-button">Wake Up Homer</button>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section id="sadgasm" class="section">
+                        <div class="content-wrapper">
+                            <div class="text-content">
+                                <h2>Sadgasm World Tour</h2>
+                                <p class="grunge-text">Pain, donuts, and grunge.</p>
+
+                                <div class="playlist">
+                                    <div class="track">
+                                        <div class="track-info">
+                                            <span class="track-title">Politically Incorrect</span>
+                                            <span class="track-band">Sadgasm</span>
+                                        </div>
+                                        <audio controls src="assets/politically_incorrect.mp3"
+                                            class="grunge-player"></audio>
+                                    </div>
+
+                                    <div class="track">
+                                        <div class="track-info">
+                                            <span class="track-title">Shave Me</span>
+                                            <span class="track-band">Sadgasm</span>
+                                        </div>
+                                        <audio controls src="assets/shave_me.mp3" class="grunge-player"></audio>
+                                    </div>
+
+                                    <div class="track">
+                                        <div class="track-info">
+                                            <span class="track-title">Brain Freeze</span>
+                                            <span class="track-band">Sadgasm</span>
+                                        </div>
+                                        <audio controls src="assets/brain_freeze.mp3" class="grunge-player"></audio>
+                                    </div>
+
+                                    <div class="track">
+                                        <div class="track-info">
+                                            <span class="track-title">Margerine</span>
+                                            <span class="track-band">Sadgasm</span>
+                                        </div>
+                                        <audio controls src="assets/margerine.mp3" class="grunge-player"></audio>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="image-wrapper">
+                                <!-- Placeholder for a Sadgasm image if available, otherwise reusing a mood image or just text -->
+                                <div class="grunge-box">
+                                    <span>🎸</span>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <script src="script.js"></script>
+                </body>
+
+                </html>
